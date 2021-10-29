@@ -12,4 +12,6 @@ python3 detector.py -play "x.wav wav.d/german-shephard-daniel_simon.wav" -record
 
 You can get a list of options by adding a question mark to the command line.  -echo will echo bits of audio that are detected.  -record will record a new wav file.
 
+A good source of scary wav file can be found on https://soundbible.com.
+
 You are on your own, but you knew that.
