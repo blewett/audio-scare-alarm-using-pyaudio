@@ -7,6 +7,12 @@ To get this to run on Linux machines one needs to add pyaudio:
    sudo apt-get install portaudio19-dev
    sudo pip3 install pyaudio
 ```
+Install on windows 10
+```
+   https://www.python.org/downloads/
+   pip install pipwin
+   pipwin install pyaudio
+```
 One can run the code with CLI commands like the following:
 ```
    python3 detector.py -play "x.wav wav.d/german-shephard-daniel_simon.wav" -recording_thresold 3000 
