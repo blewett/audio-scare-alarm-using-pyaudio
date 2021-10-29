@@ -15,10 +15,10 @@ Install on windows 10:
 ```
 Install on Macs:
 ```
-xcode-select --install
-brew remove portaudio
-brew install portaudio
-pip3 install pyaudio
+   xcode-select --install
+   brew remove portaudio
+   brew install portaudio
+   pip3 install pyaudio
 ```
 One can run the code with CLI commands like the following:
 ```
