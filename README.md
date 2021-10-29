@@ -7,11 +7,18 @@ To get this to run on Linux machines one needs to add pyaudio:
    sudo apt-get install portaudio19-dev
    sudo pip3 install pyaudio
 ```
-Install on windows 10
+Install on windows 10:
 ```
    https://www.python.org/downloads/
    pip install pipwin
    pipwin install pyaudio
+```
+Install on Macs:
+```
+xcode-select --install
+brew remove portaudio
+brew install portaudio
+pip3 install pyaudio
 ```
 One can run the code with CLI commands like the following:
 ```
