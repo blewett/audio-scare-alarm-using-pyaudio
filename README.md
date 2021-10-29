@@ -24,7 +24,7 @@ One can run the code with CLI commands like the following:
 ```
    python3 detector.py -play "x.wav wav.d/german-shephard-daniel_simon.wav" -recording_thresold 3000 
 ```
-You can get a list of options by adding a question mark (e.g. ?) to the command line.  -echo will echo bits of audio that are detected.  -record will record a new wav file.
+You can get a list of options by adding a question mark (i.e. ?) to the command line.  -echo will echo bits of audio that are detected.  -record will record a new wav file.
 
 A good source of scary wav files can be found on https://soundbible.com.
 
