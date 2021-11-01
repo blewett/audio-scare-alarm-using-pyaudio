@@ -15,6 +15,7 @@ Install on windows 10:
 ```
 Install on Macs:
 ```
+   (download xcode from the app store - it is free)
    xcode-select --install
    brew remove portaudio
    brew install portaudio
