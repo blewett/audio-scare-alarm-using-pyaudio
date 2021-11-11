@@ -1,6 +1,10 @@
 """
   detector.py: Original work Copyright (C) 2021 by Blewett
 
+ This uses a microphone as event detector input to play alarm sounds.
+ This code should work on most any operating system which supports
+ python3 and pyaudio.
+
 MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -96,11 +100,27 @@ class wave_buffer:
         self.framerate = RATE
 #
 
+def nullStderr():
+    global old_sys_stderr
+
+    sys.stderr.flush()
+    old_sys_stderr = sys.stderr
+    err = open('/dev/null', 'a+')
+    os.dup2(err.fileno(), sys.stderr.fileno())
+
+def restoreStderr():
+    os.dup2(sys.stdout.fileno(), sys.stderr.fileno())
+
 def initialize():
     global audio
     global audio_index
 
+    print("Ignoring error messages!");
+    nullStderr()
     audio = pyaudio.PyAudio()
+    restoreStderr()
+    print("Error messages restored!");
+    print()
 
     print("----------------------recording device list---------------------")
     info = audio.get_host_api_info_by_index(0)
@@ -274,7 +294,7 @@ def listen():
                     play_index += 1
                     if allow_echo_reverb == False:
                         stream.start_stream()
-# end listen
+#
 
 def user_exit():
     while True:
@@ -526,3 +546,4 @@ if __name__=="__main__":
         t.join()
 
     audio.terminate()
+#
