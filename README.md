@@ -23,7 +23,7 @@ Install on Macs:
 ```
 One can run the code with CLI commands like the following:
 ```
-   python3 detector.py -play wav.d/german-shephard-daniel_simon.wav -recording_thresold 3000 
+   python3 detector.py -play wav.d/german-shephard-Daniel-Simon-SoundBible.com.wav -recording_thresold 3000 
 ```
 You can get a list of options by adding a question mark (i.e. ?) to the command line.  -echo option will echo bits of audio that are detected.  The -record option will record a new wav file.
 
